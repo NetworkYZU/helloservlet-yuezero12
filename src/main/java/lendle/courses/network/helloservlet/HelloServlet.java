@@ -24,12 +24,12 @@ public class HelloServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=utf-8");
         try(PrintWriter out=resp.getWriter()){
-            //輸出
-            // <html>
-            // <body>
-            //  <h1>Hello!</h1>
-            // </body>
-            // </html>
+            out.println("<html>");
+            out.println("<body>");
+            out.println(req.getRequestURI());
+            out.println("suprise mother fucker");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
     
